@@ -33,6 +33,7 @@ I want to get and export of the exchange rate as a JSON output every hour into a
   pip install boto3 
   pip install jsons 
   pip install requests
+  pip3 install forex-python
 ```
 
 8. Creating directories and files for thr scripts to run
