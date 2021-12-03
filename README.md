@@ -21,7 +21,12 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 
 ![image](https://github.com/johnadewumi1/Exchnage_Rate/blob/main/Image/ssh.png)
 
-6. 
+6. Create directories and folders
+ * Create Directory called xchage
+ * in xchange directory, create 2 directories called ```data``` and ```scripts```
+ * go inside scripts and create 2 files called
+   * exchange_rate.py ( this will contain the python script to run the exchage rate)
+   * runscripts.sh ( this will be use to run the python script above)
 
 
 
