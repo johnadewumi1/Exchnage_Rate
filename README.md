@@ -21,13 +21,20 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 
 ![image](https://github.com/johnadewumi1/Exchnage_Rate/blob/main/Image/ssh.png)
 
-6. Create directories and folders
+6. Install the various python package libraries needed for the project to run in the EC2 instance. pip install pandas pip install boto3 pip install json pip install requests .
+
+7. Creating directories and files for thr scripts to run
  * Create Directory called xchage
- * in xchange directory, create 2 directories called ```data``` and ```scripts```
- * go inside scripts and create 2 files called
+ * In xchange directory, create 2 directories called ```data``` and ```scripts```
+ * Go inside scripts and create 2 files called
    * exchange_rate.py ( this will contain the python script to run the exchage rate)
    * runscripts.sh ( this will be use to run the python script above)
-
+ * Create a cron job in the home directory **crontab -e** that will be used to run the job daily  or hourly depend on how ypu want information.(learn how to create cron job). Check the ***crontab -e.sh*** for script you might want to input.
+ 8. create a new python script that would take in various exchange rates of the world's currency and output it. provide a name for this script. and upload it to the EC2 instance in the exchange_rate.py by ``` vim exchange_rate.py``` paste the code and save by using 
+        ```
+        Esc
+        :wq
+        ```
 
 
 
