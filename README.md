@@ -13,10 +13,10 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 
 ##SOLUTION
 
-1. log into, ([aws console](https://s3.console.aws.amazon.com))
-2. In Define Pattern, choose Event pattern.
-3. In Event Matching pattern, choose Custom pattern.
-4. In the Event pattern preview pane, copy and paste the following example event pattern: use Event_pattern.json template
+1. log into, ([aws console](https://s3.console.aws.amazon.com)) and create EC2 instanceof your desired, ensure you can SSH into it. see the cfn tamplate for ec2.
+2. Create S3 bucket that for you to out the json file output from the EC2. see how to create s3 ([s3 bucket documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)). A cloud formation template above s3.yaml was usede to create one for this project.
+3. Create an ***IAM Role*** and attach a ***IAM Policy*** that enable your **ec2** to put object and publish sns notification to the right resources. Policy already in the repository, check **iam-policy.json**. Copy the policy and paste after creating your role.
+4. Replace your BuckeNmane & TopicArn in the code for accurate deployment.
 
 
 
