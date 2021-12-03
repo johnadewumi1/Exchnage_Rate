@@ -1,5 +1,5 @@
 # Exchnage_Rate
-This projrct is to get daily exchange rate and store the output in an s3 bucket
+This projrct is to get daily exchange rate and store the output in an s3 bucket and also send email to the security team for any failed on rate or upload.
 
 
 
