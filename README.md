@@ -53,9 +53,8 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 
 9. Create .env file looks like this. Make sure you replace the values with the ones you got from the previous step.
 ```
-    AWS_ACCESS_KEY_ID=AKIAZZEA7BC7QHVCAI23
-    AWS_SECRET_ACCESS_KEY=XJgaLXka4is+YxpmFkpPllBUbWHjJmRdE2wmmPh4
-
+    AWS_ACCESS_KEY_ID=your-access-key-id
+    AWS_SECRET_ACCESS_KEY=your-secret-access-key
 ```
 
 9. The bash script named ***runscripts.sh* it's atteched in the repository, this will trigger the python scripts (exchange_rate.py) and also the SNS
