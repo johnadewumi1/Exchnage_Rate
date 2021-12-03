@@ -13,7 +13,7 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 
 ##SOLUTION
 
-1. log into, (aws console)[https://s3.console.aws.amazon.com]
+1. log into, ([aws console](https://s3.console.aws.amazon.com))
 2. In Define Pattern, choose Event pattern.
 3. In Event Matching pattern, choose Custom pattern.
 4. In the Event pattern preview pane, copy and paste the following example event pattern: use Event_pattern.json template
