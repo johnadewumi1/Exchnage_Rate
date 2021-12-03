@@ -25,7 +25,7 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 ``` 
   pip install pandas
   pip install boto3 
-  pip install json 
+  pip install jsons 
   pip install requests
 ```
 
