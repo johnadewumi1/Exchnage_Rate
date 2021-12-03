@@ -29,11 +29,12 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 
 7. Install the various python package libraries needed for the project to run in the EC2 instance.
 ``` 
-  pip install pandas
-  pip install boto3 
-  pip install jsons 
-  pip install requests
+  pip3 install pandas
+  pip3 install boto3 
+  pip3 install jsons 
+  pip3 install requests
   pip3 install forex-python
+  pip3 install python-dotenv
 ```
 
 8. Creating directories and files for thr scripts to run
@@ -50,9 +51,16 @@ I want to get and export of the exchange rate as a JSON output every hour into a
         :wq
     ```
 
+9. Create .env file looks like this. Make sure you replace the values with the ones you got from the previous step.
+```
+    AWS_ACCESS_KEY_ID=AKIAZZEA7BC7QHVCAI23
+    AWS_SECRET_ACCESS_KEY=XJgaLXka4is+YxpmFkpPllBUbWHjJmRdE2wmmPh4
+
+```
+
 9. The bash script named ***runscripts.sh* it's atteched in the repository, this will trigger the python scripts (exchange_rate.py) and also the SNS
 
-10. The crontab -e enables the code to run at a regulat schedule prefered for the purpose of your project. Check ***crontab -e.sh***, I created for 5mins and hourly schedule.
+10. The ***crontab -e*** enables the code to run at a regulat schedule prefered for the purpose of your project. Check ***crontab -e.sh***, I created for 5mins and hourly schedule.
 
 
 
