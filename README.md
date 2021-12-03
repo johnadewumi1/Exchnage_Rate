@@ -41,7 +41,8 @@ I want to get and export of the exchange rate as a JSON output every hour into a
         Esc
         :wq
     ```
-
+9. The bash script named ***runscripts.sh* it's atteched in the repository, this will trigger the python scripts (exchange_rate.py) and also the SNS
+10. The crontab -e enables the code to run at a regulat schedule prefered for the purpose of your project. Check ***crontab -e.sh***
 
 
 

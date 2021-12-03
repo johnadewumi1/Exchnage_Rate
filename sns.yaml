@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "CloudFormation template to deploy a SNSTOPIC"
+
+Parameters: {}
+
+Resources:
+  Sns-Topic:
+   Type: AWS::SNS::Topic
+   Properties: 
+     Subscription: 
+       - Endpoint: "youremail"
+         Protocol: "email"
+     TopicName: !Ref TopicName     
+          
+Outputs: 
+  MyTopicArn: 
+    Description: Arn of Created SNS Topic
+    Value: !Ref Sns-Topic
+    
+Metadata: {}
+Conditions: {}
