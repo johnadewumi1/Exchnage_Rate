@@ -44,7 +44,7 @@ I want to get and export of the exchange rate as a JSON output every hour into a
    * runscripts.sh ( this will be use to run the python script above)
  * Create a cron job in the home directory **crontab -e** that will be used to run the job daily  or hourly depend on how ypu want information.(learn how to create cron job). Check the ***crontab -e.sh*** for script you might want to input.
 
- 8. create a new python script(check ***xchage_scrip.py*** for the code) that would take in various exchange rates of the world's currency and output it. provide a name for this script. and upload it to the EC2 instance in the exchange_rate.py by ``` vim exchange_rate.py``` paste the code and save by using 
+ 8. create a new python script(check ***xchage_scrip.py*** for the code) that would take in various exchange rates of the world's currency and output it. provide a name for this script. and upload it to the EC2 instance in the exchange_rate.py by ``` vim exchange_rate.py``` paste the code and save by using this on your windows computer.
     ```
         Esc
         :wq
