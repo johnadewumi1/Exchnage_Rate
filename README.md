@@ -61,6 +61,5 @@ I want to get and export of the exchange rate as a JSON output every hour into a
 
 10. The ***crontab -e*** enables the code to run at a regulat schedule prefered for the purpose of your project. Check ***crontab -e.sh***, I created for 5mins and hourly schedule.
 
-
-
-
+**When the cron job triggers on schedule, you receive an SNS email notification will be sent**
+![image](https://github.com/johnadewumi1/Exchnage_Rate/blob/main/Image/email.png)
