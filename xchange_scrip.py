@@ -28,7 +28,7 @@ def upload_to_s3(rate_json):
     aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
     aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY')
 )
-    response = s3_client.upload_file(file_name,bucket_name,file_name)
+    response = s3_client.put_object(file_name,bucket_name,file_name)
 
 
 
