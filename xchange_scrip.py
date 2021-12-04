@@ -35,20 +35,24 @@ def upload_to_s3(rate_json):
 
 #write to file
 with open(rate_json, 'w') as outfile:
-    outfile.write(json_file)
-    upload_to_s3(rate_json)
+    json.dump(rate,outfile)
+    #outfile.write(json_file)
+upload_to_s3(rate_json, outfile)
 
 
 # send SNS message with warning and bucket policy
 sns = boto3.client("sns", region_name='us-west-1')
+  
 bucket_name = 'exchange-rate-bucket1'
 subject =  rate_json + " has been uploaded"
 message = 'Hello, the latest exchange rate has been uploaded in the' + bucket_name + 'kindly update the customer data for the new market rate'
 
+try:
+    response = sns.publish(
 
-response = sns.publish(
-
-    TopicArn = 'arn:aws:sns:us-east-1:672432851135:ExchangeRate',
-    Subject = subject,
-    Message = message
-)
+        TopicArn = 'arn:aws:sns:us-east-1:672432851135:ExchangeRate',
+        Subject = subject,
+        Message = message
+    )
+except exception as e:
+        print("no data was collected; no alert sent.")
